@@ -95,4 +95,19 @@ public:
         }
     }
 
-    
+     void inorder(Node *ptr)
+    {
+        if (isEmpty())
+        {
+            cout << "tree is empty" << endl;
+            return;
+        }
+        if (ptr == nullptr)
+            return;
+
+        inorder(ptr->leftchild);
+        cout << ptr->info << " "; // parent
+        inorder(ptr->rightchild);
+    }
+
+  
